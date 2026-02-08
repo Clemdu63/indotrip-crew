@@ -1,0 +1,16 @@
+{
+  "name": "IndoTrip Crew",
+  "short_name": "IndoTrip",
+  "description": "App collaborative pour proposer, voter et generer un itineraire en Indonesie.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f7f1",
+  "theme_color": "#0B8C88",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

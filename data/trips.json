@@ -1,0 +1,50 @@
+{
+  "trips": {
+    "F902F9": {
+      "id": "F902F9",
+      "name": "Test Indo",
+      "days": 14,
+      "createdAt": "2026-02-08T17:20:38.526Z",
+      "updatedAt": "2026-02-08T17:20:38.528Z",
+      "members": [
+        {
+          "id": "18F00602F9",
+          "name": "Clem",
+          "color": "#0B8C88"
+        }
+      ],
+      "ideas": [],
+      "itinerary": null
+    },
+    "5A6CE9": {
+      "id": "5A6CE9",
+      "name": "SSE",
+      "days": 14,
+      "createdAt": "2026-02-08T17:21:04.213Z",
+      "updatedAt": "2026-02-08T17:21:05.361Z",
+      "members": [
+        {
+          "id": "CAC605A13C",
+          "name": "Clem",
+          "color": "#0B8C88"
+        }
+      ],
+      "ideas": [
+        {
+          "id": "D54F55C009",
+          "title": "Test live",
+          "type": "Lieu",
+          "island": "Bali",
+          "location": "",
+          "zone": "Uluwatu",
+          "notes": "",
+          "createdBy": "CAC605A13C",
+          "createdByName": "Clem",
+          "createdAt": "2026-02-08T17:21:05.361Z",
+          "votes": {}
+        }
+      ],
+      "itinerary": null
+    }
+  }
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: indotrip-crew
+    runtime: node
+    plan: starter
+    buildCommand: npm install --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: indotrip-data
+      mountPath: /var/data
+      sizeGB: 1

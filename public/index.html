@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B8C88" />
+    <title>IndoTrip Crew</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="bg-shape shape-a"></div>
+    <div class="bg-shape shape-b"></div>
+    <main class="app-shell">
+      <section id="onboarding" class="panel show">
+        <h1>IndoTrip Crew</h1>
+        <p class="sub">Proposez, votez, puis laissez l'app construire un plan de 14 jours coherent.</p>
+
+        <div class="card">
+          <h2>Creer un voyage</h2>
+          <form id="createTripForm" class="stack">
+            <label>
+              Nom du voyage
+              <input name="tripName" type="text" placeholder="Ex: Bali + Gili + Lombok" maxlength="50" required />
+            </label>
+            <label>
+              Nombre de jours
+              <input name="days" type="number" min="3" max="30" value="14" required />
+            </label>
+            <label>
+              Ton prenom
+              <input name="creatorName" type="text" maxlength="30" placeholder="Ex: Clement" required />
+            </label>
+            <button type="submit" class="btn primary">Creer et partager</button>
+          </form>
+        </div>
+
+        <div class="split-line">ou</div>
+
+        <div class="card">
+          <h2>Rejoindre un voyage</h2>
+          <form id="joinTripForm" class="stack">
+            <label>
+              Code du voyage
+              <input name="tripCode" type="text" placeholder="Ex: A1B2C3" maxlength="8" required />
+            </label>
+            <label>
+              Ton prenom
+              <input name="joinName" type="text" maxlength="30" required />
+            </label>
+            <button type="submit" class="btn secondary">Rejoindre</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="workspace" class="panel">
+        <header class="topbar">
+          <div>
+            <p class="overline">Roadtrip collaboratif</p>
+            <h1 id="tripTitle">Voyage</h1>
+            <p id="tripMeta" class="sub"></p>
+          </div>
+          <div class="top-actions">
+            <button id="installBtn" class="btn ghost hidden" type="button">Installer sur iPhone</button>
+            <button id="copyLinkBtn" class="btn ghost" type="button">Copier le lien</button>
+          </div>
+        </header>
+
+        <section class="card members-card">
+          <h2>Equipe (3 voyageurs)</h2>
+          <div id="membersList" class="members"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <h2>Ajouter une idee</h2>
+            <p>Lieu, activite ou ville</p>
+          </div>
+          <form id="ideaForm" class="idea-grid">
+            <label>
+              Idee
+              <input name="title" type="text" maxlength="100" placeholder="Snorkeling a Amed" required />
+            </label>
+            <label>
+              Type
+              <select name="type">
+                <option value="Lieu">Lieu</option>
+                <option value="Activite">Activite</option>
+                <option value="Ville">Ville</option>
+                <option value="Nature">Nature</option>
+                <option value="Culture">Culture</option>
+              </select>
+            </label>
+            <label>
+              Ile
+              <select name="island">
+                <option value="Bali">Bali</option>
+                <option value="Nusa Penida">Nusa Penida</option>
+                <option value="Gili">Gili</option>
+                <option value="Lombok">Lombok</option>
+                <option value="Java">Java</option>
+                <option value="Flores">Flores</option>
+                <option value="Komodo">Komodo</option>
+                <option value="Other">Autre</option>
+              </select>
+            </label>
+            <label>
+              Zone / ville
+              <input name="zone" type="text" maxlength="80" placeholder="Ubud, Canggu, Senggigi..." />
+            </label>
+            <label>
+              Precisions
+              <input name="notes" type="text" maxlength="240" placeholder="Coucher de soleil, ideal matin..." />
+            </label>
+            <button type="submit" class="btn primary">Ajouter</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <h2>Idees et votes live</h2>
+            <p>Les changements apparaissent en direct</p>
+          </div>
+          <div id="ideasList" class="ideas"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <h2>Generateur d'itineraire</h2>
+            <p>Regroupe les idees preferees par zones et limite les deplacements</p>
+          </div>
+          <div class="itinerary-controls">
+            <label>
+              Duree (jours)
+              <input id="daysInput" type="number" min="3" max="30" value="14" />
+            </label>
+            <button id="generateBtn" class="btn primary" type="button">Generer automatiquement</button>
+          </div>
+          <div id="itineraryBlock" class="itinerary"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

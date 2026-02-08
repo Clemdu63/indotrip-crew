@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="IndoTrip icon">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B8C88"/>
+      <stop offset="1" stop-color="#E66D3D"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="64" fill="url(#g)"/>
+  <path d="M58 145c18-34 52-54 88-54 22 0 43 7 61 20l-15 21c-14-10-30-15-46-15-28 0-55 15-69 40l-19-12z" fill="#fff"/>
+  <circle cx="173" cy="88" r="18" fill="#fff"/>
+  <path d="M67 179h122v20H67z" fill="#fff" opacity="0.85"/>
+</svg>
