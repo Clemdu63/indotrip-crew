@@ -2,7 +2,7 @@ services:
   - type: web
     name: indotrip-crew
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm install --omit=dev
     startCommand: node server.js
     healthCheckPath: /healthz
